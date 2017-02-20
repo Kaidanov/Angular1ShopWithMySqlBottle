@@ -1,0 +1,23 @@
+﻿<div>
+    <a href="#/dashboard/{{product.id}}"><b>{{product.name}}</b></a>
+</div>
+<img ng-src="content/{{product.icon}}" alt="{{product.name}}" class="iconImg" />
+<div>Price:  {{product.price}}</div>
+
+
+<label for="chklabl">
+    <input type="checkbox"
+           ng-model="checked"
+           name="chklabl"
+           id="chklabl"> More Details
+</label>
+<div ng-show="checked">
+    Full Description : {{product.fullDescription }}
+</div>
+<div>
+    <button class="btn btn-block btn-success"
+            ng-click="cart.addItem(product.id, product.name, product.price, 1)">
+        <i class="icon-shopping-cart icon-white" /> add to cart
+    </button>
+
+</div>

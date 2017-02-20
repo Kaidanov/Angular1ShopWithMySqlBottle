@@ -1,0 +1,77 @@
+﻿<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-xs-8">
+            <div >
+                <a href="#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1">
+                    <i class="icon-shopping-cart" />
+                    <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                    <span ng-show="cart.getTotalCount(product.id) > 0"><br />this item is in the cart</span>
+                </a>
+            </div>
+            <div>
+                <label> Product Name: {{product.name}}</label>
+            </div>
+            <div>
+                <img ng-src="content/{{product.image}}" alt="{{product.name}}" />
+            </div>
+            <div>
+                <label>Price:  {{product.price}}</label>
+            </div>
+            <div>
+                <label>Full Description :  {{product.fullDescription }} </label>
+            </div>
+            <div>
+                <label>
+                    Color :
+                </label>
+                <ul>
+                    <li ng-repeat="color in product.color">
+                        <label>
+
+                            <input type="radio" ng-model="chosenColor" name="color" value="{{color.name}}" required />
+                            {{color}}
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <label>
+                    Capacity :
+                </label>
+                <ul>
+                    <li ng-repeat="capacity in product.capacity">
+                        <label>
+
+                            <input type="radio" ng-model="chosenCapacity" name="capacity" value="{{capacity.name}}" required />
+                            {{capacity}}
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <label>Weight :  {{product.weight }}  </label>
+            </div>
+            <div>
+                <label>Dimensions :  {{product.dimensions }}  </label>
+            </div>
+        </div>
+        <div class="col-xs-4">
+            <button class="btn btn-block"
+                    onclick="window.location.href='#/dashboard'">
+                <i class="icon-chevron-left" /> back to store
+            </button>
+            <button class="btn btn-block btn-danger"
+                    ng-click="cart.addItem(product.id, product.name, product.price, -10000)"
+                    ng-disabled="cart.getTotalCount(product.id) < 1">
+                <i class="icon-trash icon-white" /> remove from cart
+            </button>
+            <button class="btn btn-block btn-success" 
+                    ng-click="cart.addItem(product.id, product.name, product.price, 1)">
+                <i class="icon-shopping-cart icon-white" /> add to cart
+            </button>
+
+
+
+        </div>
+    </div>
+</div>

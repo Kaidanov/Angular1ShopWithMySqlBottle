@@ -1,0 +1,29 @@
+<p class="text-info">
+    Thanks for shopping at the Angular Store.<br />
+    This is your dashboard view , showing the products in the store.<br />
+    You can enter the product details page by pressing <br />on it's linked title
+    or add product to the cart.<br />
+    You can enter the cart to manage products for purchase and checkout.<br />
+</p>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-xs-12 well" >
+            <p >
+                <label> Search: </label>
+                <input ng-model="search">
+                <a href="#/cart" title="go to shopping cart" ng-disabled="cart.getTotalCount() < 1" class="cartRtl">
+                    <i class="icon-shopping-cart" />
+                    <b>{{cart.getTotalCount()}}</b> items, <b>{{cart.getTotalPrice() | currency}}</b>
+                </a>
+            </p>
+            <div  class="col-xs-offset-1">
+                <div data-ng-repeat="product in products  | orderBy:'name' | filter:search" class="products well">
+                    <product-box></product-box>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

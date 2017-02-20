@@ -1,0 +1,23 @@
+﻿.products {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid lightgrey;
+    margin: 0px 2px 2px 2px;
+}
+
+.iconImg {
+    width: 80px;
+}
+
+.quantityInput {
+    width: 50px;
+}
+
+div[class^="col-xs-4"] {
+    padding: 0.5%;
+    margin: 0;
+}
+
+.cartRtl{
+    float:right;
+}
