@@ -7,3 +7,10 @@ Has shop_db.sql for mysql recreation on your pc.
 
 Screenshots:
 
+![Alt text](https://github.com/Kaidanov/Angular1ShopWithMySqlBottle/blob/master/content/SCREENSHOTS/FULLwEBvIEW.png)
+
+![Alt text](https://github.com/Kaidanov/Angular1ShopWithMySqlBottle/blob/master/content/SCREENSHOTS/demoShopDashboard.png)
+
+![Alt text](https://github.com/Kaidanov/Angular1ShopWithMySqlBottle/blob/master/content/SCREENSHOTS/cart.png)
+
+![Alt text](https://github.com/Kaidanov/Angular1ShopWithMySqlBottle/blob/master/content/SCREENSHOTS/paypal.png)
